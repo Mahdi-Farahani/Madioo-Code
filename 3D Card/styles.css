@@ -1,0 +1,118 @@
+:root {
+	--card-height: 190px;
+	--card-width: calc(var(--card-height) / 1.5);
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #191c29;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.wrapper {
+	transition: all 0.5s;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+	opacity: 0.7;
+}
+.card {
+	width: var(--card-width);
+	height: var(--card-height);
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	padding: 0 36px;
+	perspective: 2500px;
+	margin: 0 50px;
+}
+
+.card:hover .wrapper {
+	transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+	box-shadow: 2px 35px 32px rgba(0, 0, 0, 0.75);
+}
+.cover-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 8px;
+}
+
+.title {
+	width: 100%;
+	margin-bottom: 25px;
+	transition: all 0.5s;
+}
+
+.card:hover .title {
+	transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+.card:hover .character {
+	opacity: 1;
+	transform: translate3d(0%, -30%, 100px);
+}
+
+.wrapper::before,
+.wrapper::after {
+	content: '';
+	opacity: 0;
+	width: 100%;
+	height: 190px;
+	transition: all 0.5s;
+	position: absolute;
+	left: 0;
+	border-radius: 8px;
+}
+
+.wrapper::before {
+	top: 0;
+	height: 100%;
+	background-image: linear-gradient(
+		to top,
+		transparent 50%,
+		rgba(12, 13, 19, 0.5) 70%,
+		rgba(12, 13, 19) 95%
+	);
+}
+
+.wrapper::after {
+	opacity: 1;
+	bottom: 0;
+	background-image: linear-gradient(
+		to bottom,
+		transparent 50%,
+		rgba(12, 13, 19, 0.5) 70%,
+		rgba(12, 13, 19) 95%
+	);
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+	opacity: 1;
+}
+
+.madioo{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+}
