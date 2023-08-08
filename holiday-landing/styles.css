@@ -1,0 +1,272 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul {
+	padding: 0;
+	margin: 0;
+}
+@font-face {
+	font-family: 'LeagueSpartan';
+	src: url('./assets/fonts/LeagueSpartan-Bold.ttf');
+}
+@font-face {
+	font-family: 'RedHatDisplay';
+	src: url('./assets/fonts/RedHatDisplay-Medium.ttf');
+}
+
+body {
+	background-image: url('./assets/background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	backdrop-filter: blur(7px);
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	width: 100%;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 1100px;
+	padding: 20px 0px 20px 0px;
+}
+
+.mobile-menu {
+	display: none;
+}
+
+.burger-icon {
+	width: 25px;
+	height: 25px;
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+	gap: 25px;
+}
+li {
+	color: #fff;
+	font-weight: 500;
+	font-size: 18px;
+	font-family: 'RedHatDisplay';
+}
+
+li:hover {
+	color: #ffa42a;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.auth-btn {
+	display: flex;
+	gap: 25px;
+	align-items: center;
+}
+.login {
+	color: #fff;
+	font-weight: 500;
+	font-family: 'RedHatDisplay';
+}
+.login:hover {
+	color: #ffa42a;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.signup-btn {
+	background-color: #ffa42a;
+	outline: none;
+	border: none;
+	border-radius: 8px;
+	width: 100px;
+	height: 35px;
+	transition: all 0.5s;
+	font-family: 'RedHatDisplay';
+}
+.signup-btn:hover {
+	background-color: #ffff;
+	color: #ffa42a;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 1100px;
+	height: 100vh;
+	margin: 0 auto;
+	padding: 50px 0px 50px 0px;
+}
+
+.hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+.img-container {
+	position: relative;
+}
+
+.hero-img {
+	width: 500px;
+	position: relative;
+	animation-name: move-img;
+	animation-duration: 4s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.cloud,
+.cloud-two,
+.cloud-three {
+	width: 350px;
+	position: absolute;
+	animation-name: cloud;
+	animation-duration: 3s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.cloud {
+	left: 0px;
+	top: 80px;
+	opacity: 0.5;
+}
+.cloud-two {
+	right: 300px;
+	top: -80px;
+	opacity: 0.8;
+}
+.cloud-three {
+	right: -100px;
+	top: -20px;
+	opacity: 0.8;
+}
+
+@keyframes move-img {
+	0% {
+		transform: translateY(2%);
+	}
+	100% {
+		transform: translateY(-2%);
+	}
+}
+@keyframes cloud {
+	0% {
+		transform: translateY(7%);
+	}
+	50% {
+		transform: translateX(2%);
+	}
+	100% {
+		transform: translateY(6%);
+	}
+}
+
+.title {
+	font-family: 'LeagueSpartan';
+	color: #fff;
+	font-size: 7em;
+}
+.subTitle {
+	font-family: 'LeagueSpartan';
+	color: #fff;
+	font-size: 7em;
+	width: 50%;
+}
+.box {
+	background: rgba(255, 255, 255, 0.27);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	border-radius: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 15px 0px 15px;
+	margin-top: 20px;
+}
+.content-box {
+	display: flex;
+	margin-bottom: 20px;
+	gap: 60px;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.content-box h4 {
+	font-family: 'RedHatDisplay';
+	text-align: left;
+	font-size: 21px;
+}
+.content-box h6 {
+	font-family: 'RedHatDisplay';
+	text-align: left;
+	font-size: 14px;
+	opacity: 0.8;
+}
+.icon {
+	width: 35px;
+	height: 35px;
+}
+
+@media (max-width: 922px) {
+	main {
+		height: 100%;
+	}
+	.hero {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.menu {
+		display: none;
+	}
+	.mobile-menu {
+		display: flex;
+		justify-content: space-between;
+		width: 90%;
+		padding: 20px 0px 20px 0px;
+	}
+	.hero-img {
+		width: 350px;
+		margin-top: 50px;
+	}
+	.cloud,
+	.cloud-two,
+	.cloud-three {
+		top: 20px;
+		width: 200px;
+	}
+	.title {
+		font-size: 6em;
+	}
+	.content-box {
+		gap: 40px;
+	}
+	.content-box h4 {
+		font-size: 18px;
+	}
+	.content-box h6 {
+		font-size: 12px;
+	}
+	.icon {
+		width: 25px;
+		height: 25px;
+	}
+}
