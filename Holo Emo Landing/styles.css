@@ -1,0 +1,323 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+ul {
+	margin: 0;
+	padding: 0;
+}
+@font-face {
+	font-family: 'LeagueSpartan';
+	src: url(./assets/fonts/LeagueSpartan-Bold.ttf);
+}
+@font-face {
+	font-family: 'RedHatDisplay';
+	src: url(./assets/fonts/RedHatDisplay-Medium.ttf);
+}
+
+body {
+	background: linear-gradient(
+		210deg,
+		rgba(219, 206, 232, 1) 0%,
+		rgba(220, 225, 252, 1) 19%,
+		rgba(203, 191, 234, 1) 32%,
+		rgba(206, 179, 237, 1) 49%,
+		rgba(188, 218, 242, 1) 78%,
+		rgba(234, 200, 226, 1) 100%
+	);
+}
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.639);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	padding: 20px 0px 20px 0px;
+	width: 100%;
+}
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 1100px;
+	padding: 0px 50px 0px 50px;
+}
+.mobile-menu {
+	display: none;
+}
+.burger-icon {
+	width: 25px;
+	height: 25px;
+}
+ul {
+	list-style-type: none;
+	display: flex;
+	gap: 25px;
+	margin: 0;
+}
+li {
+	color: #452e75;
+	font-weight: 500;
+	font-size: 22px;
+	margin: 0;
+	font-family: 'RedHatDisplay';
+}
+li:hover {
+	color: #bcdaf2;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.auth-btn {
+	display: flex;
+	gap: 25px;
+	align-items: center;
+}
+.login {
+	color: #452e75;
+	font-weight: 500;
+	font-size: 22px;
+}
+.login:hover {
+	color: #bcdaf2;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.signUp-btn {
+	background-color: #452e75;
+	cursor: pointer;
+	transition: all 0.5s;
+	color: #fff;
+	outline: none;
+	border: none;
+	border-radius: 20px;
+	width: 150px;
+	height: 40px;
+	font-size: 20px;
+}
+.signUp-btn:hover {
+	background: rgb(152, 41, 227);
+	background: linear-gradient(
+		210deg,
+		rgba(152, 41, 227, 1) 0%,
+		rgba(222, 150, 226, 1) 50%,
+		rgba(97, 188, 226, 1) 100%
+	);
+	transition: all 0.5s;
+}
+.get-started {
+	background-color: #452e75;
+	color: #fff;
+	cursor: pointer;
+	transition: all 0.5s;
+	border: none;
+	border-radius: 40px;
+	width: 200px;
+	height: 60px;
+	margin-top: 45px;
+	font-size: 24px;
+}
+.get-started:hover {
+	background: rgb(152, 41, 227);
+	background: linear-gradient(
+		210deg,
+		rgba(152, 41, 227, 1) 0%,
+		rgba(222, 150, 226, 1) 50%,
+		rgba(97, 188, 226, 1) 100%
+	);
+	color: #452e75;
+	transition: all 0.5s;
+}
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0px 50px 0px 50px;
+}
+.container {
+	position: relative;
+	overflow: hidden;
+}
+.shape,
+.shape-two,
+.shape-four {
+	position: absolute;
+	z-index: -1;
+	transition: top 1s ease;
+}
+.shape {
+	width: 200px;
+	left: 30px;
+	opacity: 0.2;
+}
+.shape-two {
+	width: 200px;
+	right: 100px;
+	opacity: 0.2;
+}
+.shape-four {
+	width: 250px;
+	right: 10px;
+	bottom: 20px;
+	opacity: 0.7;
+	position: fixed;
+}
+.shape-four .hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin-top: 100px;
+}
+
+.title {
+	color: #452e75;
+	font-family: 'LeagueSpartan';
+	font-size: 7em;
+}
+.content h6 {
+	color: #452e75;
+	font-family: 'RedHatDisplay';
+	font-size: 20px;
+	margin-top: 10px;
+	line-height: 28px;
+}
+
+.img-container {
+	position: relative;
+}
+.hero {
+	display: flex;
+	margin-top: 100px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.hero-img {
+	width: 500px;
+	animation-name: move-img;
+	animation-duration: 4s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	position: relative;
+}
+.why-emo {
+	background: rgba(255, 255, 255, 0.36);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(9.5px);
+	-webkit-backdrop-filter: blur(9.5px);
+	padding: 40px;
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+
+@keyframes move-img {
+	0% {
+		transform: translateY(2%);
+	}
+	100% {
+		transform: translateY(-2%);
+	}
+}
+
+.auth-btn {
+	font-family: 'RedHatDisplay';
+}
+
+.why-emo h1 {
+	color: #452e75;
+	font-family: 'LeagueSpartan';
+	font-size: 5em;
+}
+.why-emo p {
+	color: #452e75;
+	font-family: 'RedHatDisplay';
+	font-size: 20px;
+	margin-top: 10px;
+	line-height: 28px;
+}
+.why-emo {
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+}
+.holoemo-img {
+	width: 450px;
+	position: absolute;
+	top: -150px;
+	left: -40px;
+	animation-name: move-img;
+	animation-duration: 2s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.holoimg-container {
+	position: relative;
+	display: flex;
+	flex: 1;
+}
+.holoimg-content {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+@media (max-width: 922px) {
+	main {
+		height: 100%;
+	}
+	.hero {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.menu {
+		display: none;
+	}
+	.mobile-menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 90%;
+	}
+	.hero-img {
+		width: 350px;
+		margin-top: 50px;
+		display: flex;
+		align-self: center;
+	}
+
+	.title {
+		font-size: 4em;
+	}
+	.holoemo-img {
+		width: 350px;
+		position: relative;
+		top: -100px;
+		left: 0;
+	}
+	.why-emo {
+		flex-direction: column;
+	}
+	.holoimg-content h1 {
+		font-size: 5em;
+	}
+	.holoimg-content h6 {
+		font-size: 16px;
+	}
+	.hero-img{
+		width: 250px;
+	}
+	.hero{
+		margin-top: 0px;
+	}
+}
